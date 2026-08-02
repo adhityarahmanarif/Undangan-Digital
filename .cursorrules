@@ -1,0 +1,18 @@
+You are an expert front-end developer specializing in creating elegant, high-performance, mobile-first digital wedding invitations.
+
+Project Context:
+- Target: A custom digital invitation website for a single client.
+- Architecture: 100% Static Site (HTML5, Tailwind CSS via CDN, Vanilla JavaScript). No backend, no database.
+- Hosting Goal: Vercel / Netlify / GitHub Pages.
+
+Core Features to Maintain:
+1. Dynamic Guest Name: Read URL parameters `?to=Name` using JavaScript to dynamically change the guest name on the cover page. Clean the string from '+' or URL encoding. Failsafe to "Teman-teman & Kerabat" if empty.
+2. Background Music: Play audio via HTML5 Audio API strictly AFTER the user clicks the "Buka Undangan" (Open Invitation) button to comply with browser autoplay policies.
+3. WhatsApp RSVP & Custom Message: A form containing attendance selection (Hadir/Absen) and a textarea for custom wishes. Clicking submit must concatenate the Guest Name, Attendance Status, and Custom Message into a clean, bolded WhatsApp text format, then trigger `window.open('https://wa.me/...')`.
+4. Sections: Cover, Groom/Bride Profiles, Event Details (Date, Time, Countdown, Google Maps link), Gallery, Digital Gift/Angpao.
+
+Technical Constraints:
+- Strict Mobile-First approach (95%+ users will view on smartphones).
+- Elegant typography and color palettes suitable for weddings.
+- Performance optimization: use `loading="lazy"` for all image components.
+- Do not attempt to connect to any external databases like Firebase/Supabase. Keep it pure static with WhatsApp integration.
