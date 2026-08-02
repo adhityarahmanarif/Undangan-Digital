@@ -416,62 +416,71 @@
 
 
             <!-- DIGITAL GIFT SECTION -->
-            <section id="gift" class="py-12 px-6 sm:px-10 text-center space-y-8">
-                <div data-aos="fade-up">
+            <section id="gift" class="py-12 px-6 sm:px-10 text-center space-y-6">
+                <div data-aos="fade-up" class="space-y-4">
                     <h3 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-2">Tanda Kasih</h3>
                     <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Angpao Digital</h2>
-                    <p class="text-xs text-stone-400 max-w-xs mx-auto mt-2">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan hadiah, Anda dapat menyalurkannya melalui:</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Bank Mandiri -->
-                    <div class="glass-card p-6 rounded-3xl border border-brand-gold/30 text-left relative overflow-hidden shadow-xl flex flex-col justify-between" data-aos="zoom-in">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="font-bold text-base tracking-wider text-yellow-500">Bank Mandiri</span>
-                                <i class="fa-solid fa-credit-card text-brand-gold text-xl"></i>
-                            </div>
-                            <p class="text-[11px] text-stone-400">Nomor Rekening:</p>
-                            <p class="font-mono text-lg font-bold text-stone-100 tracking-wider my-1">1080031554547</p>
-                            <p class="text-xs text-stone-300 mb-4">a.n <strong>RISKA EKA PUTRI</strong></p>
-                        </div>
-                        <button onclick="copyToClipboard('1080031554547', 'Bank Mandiri')" class="w-full py-2.5 rounded-xl bg-stone-800 hover:bg-brand-gold hover:text-stone-900 text-brand-gold text-xs font-semibold flex items-center justify-center gap-2 transition-all">
-                            <i class="fa-regular fa-copy"></i>
-                            <span>Salin Rekening</span>
-                        </button>
-                    </div>
-
-                    <!-- E-Wallet DANA / GoPay -->
-                    <div class="glass-card p-6 rounded-3xl border border-brand-gold/30 text-left relative overflow-hidden shadow-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="font-bold text-base tracking-wider text-emerald-400">DANA / GoPay</span>
-                                <i class="fa-solid fa-wallet text-brand-gold text-xl"></i>
-                            </div>
-                            <p class="text-[11px] text-stone-400">Nomor E-Wallet:</p>
-                            <p class="font-mono text-lg font-bold text-stone-100 tracking-wider my-1">085274336144</p>
-                            <p class="text-xs text-stone-300 mb-4">a.n <strong>RISKA EKA PUTRI</strong></p>
-                        </div>
-                        <button onclick="copyToClipboard('085274336144', 'E-Wallet DANA/GoPay')" class="w-full py-2.5 rounded-xl bg-stone-800 hover:bg-brand-gold hover:text-stone-900 text-brand-gold text-xs font-semibold flex items-center justify-center gap-2 transition-all">
-                            <i class="fa-regular fa-copy"></i>
-                            <span>Salin E-Wallet</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Physical Gift Address -->
-                <div class="glass-card p-6 rounded-3xl border border-stone-800 text-left space-y-3" data-aos="fade-up">
-                    <div class="flex items-center gap-2 text-brand-gold">
-                        <i class="fa-solid fa-box-archive text-lg"></i>
-                        <h4 class="font-semibold text-sm">Kirim Kado Fisik</h4>
-                    </div>
-                    <p class="text-xs text-stone-300 leading-relaxed">
-                        Jl. Lintas Timur Jambi - Riau, Ukui Satu, Kec. Ukui, Kabupaten Pelalawan, Riau 28382 (UP: Riska & Aldi - 085274336144)
-                    </p>
-                    <button onclick="copyToClipboard('Jl. Lintas Timur Jambi - Riau, Ukui Satu, Kec. Ukui, Kabupaten Pelalawan, Riau 28382 (UP: Riska & Aldi - 085274336144)', 'Alamat Pengiriman')" class="w-full py-2 rounded-xl bg-stone-900 text-stone-300 hover:text-brand-gold text-xs border border-stone-700 flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-copy"></i>
-                        <span>Salin Alamat</span>
+                    <p class="text-xs text-stone-400 max-w-xs mx-auto">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan hadiah, Anda dapat menekan tombol di bawah ini:</p>
+                    
+                    <button id="toggle-gift-btn" onclick="toggleGiftContent()" class="py-3.5 px-8 rounded-full bg-gradient-to-r from-brand-gold-dark via-brand-gold to-brand-gold-dark text-stone-900 font-bold shadow-lg hover:brightness-110 transition-all duration-300 inline-flex items-center gap-3 group animate-pulse-glow mt-2">
+                        <i class="fa-solid fa-gift text-lg text-stone-900 group-hover:rotate-12 transition-transform"></i>
+                        <span id="gift-btn-text">Kirim Hadiah / Angpao</span>
+                        <i id="gift-btn-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                     </button>
+                </div>
+
+                <!-- Collapsible Gift Content Container (Initially Hidden) -->
+                <div id="gift-content-container" class="hidden space-y-6 pt-4 transition-all duration-500">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Bank Mandiri -->
+                        <div class="glass-card p-6 rounded-3xl border border-brand-gold/30 text-left relative overflow-hidden shadow-xl flex flex-col justify-between" data-aos="zoom-in">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-bold text-base tracking-wider text-yellow-500">Bank Mandiri</span>
+                                    <i class="fa-solid fa-credit-card text-brand-gold text-xl"></i>
+                                </div>
+                                <p class="text-[11px] text-stone-400">Nomor Rekening:</p>
+                                <p class="font-mono text-lg font-bold text-stone-100 tracking-wider my-1">1080031554547</p>
+                                <p class="text-xs text-stone-300 mb-4">a.n <strong>RISKA EKA PUTRI</strong></p>
+                            </div>
+                            <button onclick="copyToClipboard('1080031554547', 'Bank Mandiri')" class="w-full py-2.5 rounded-xl bg-stone-800 hover:bg-brand-gold hover:text-stone-900 text-brand-gold text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Salin Rekening</span>
+                            </button>
+                        </div>
+
+                        <!-- E-Wallet DANA / GoPay -->
+                        <div class="glass-card p-6 rounded-3xl border border-brand-gold/30 text-left relative overflow-hidden shadow-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-bold text-base tracking-wider text-emerald-400">DANA / GoPay</span>
+                                    <i class="fa-solid fa-wallet text-brand-gold text-xl"></i>
+                                </div>
+                                <p class="text-[11px] text-stone-400">Nomor E-Wallet:</p>
+                                <p class="font-mono text-lg font-bold text-stone-100 tracking-wider my-1">085274336144</p>
+                                <p class="text-xs text-stone-300 mb-4">a.n <strong>RISKA EKA PUTRI</strong></p>
+                            </div>
+                            <button onclick="copyToClipboard('085274336144', 'E-Wallet DANA/GoPay')" class="w-full py-2.5 rounded-xl bg-stone-800 hover:bg-brand-gold hover:text-stone-900 text-brand-gold text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Salin E-Wallet</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Physical Gift Address -->
+                    <div class="glass-card p-6 rounded-3xl border border-stone-800 text-left space-y-3" data-aos="fade-up">
+                        <div class="flex items-center gap-2 text-brand-gold">
+                            <i class="fa-solid fa-box-archive text-lg"></i>
+                            <h4 class="font-semibold text-sm">Kirim Kado Fisik</h4>
+                        </div>
+                        <p class="text-xs text-stone-300 leading-relaxed">
+                            Jl. Lintas Timur Jambi - Riau, Ukui Satu, Kec. Ukui, Kabupaten Pelalawan, Riau 28382 (UP: Riska & Aldi - 085274336144)
+                        </p>
+                        <button onclick="copyToClipboard('Jl. Lintas Timur Jambi - Riau, Ukui Satu, Kec. Ukui, Kabupaten Pelalawan, Riau 28382 (UP: Riska & Aldi - 085274336144)', 'Alamat Pengiriman')" class="w-full py-2 rounded-xl bg-stone-900 text-stone-300 hover:text-brand-gold text-xs border border-stone-700 flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Salin Alamat</span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -779,6 +788,22 @@
 
             document.getElementById('rsvp-message').value = '';
             showToast('Ucapan tersimpan & membuka WhatsApp...');
+        }
+
+        function toggleGiftContent() {
+            const container = document.getElementById('gift-content-container');
+            const btnText = document.getElementById('gift-btn-text');
+            const btnIcon = document.getElementById('gift-btn-icon');
+
+            if (container.classList.contains('hidden')) {
+                container.classList.remove('hidden');
+                btnText.textContent = 'Tutup Angpao Digital';
+                btnIcon.classList.add('rotate-180');
+            } else {
+                container.classList.add('hidden');
+                btnText.textContent = 'Kirim Hadiah / Angpao';
+                btnIcon.classList.remove('rotate-180');
+            }
         }
 
         renderWishes();
