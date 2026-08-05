@@ -74,10 +74,23 @@
             border: 1px solid rgba(197, 160, 89, 0.25);
         }
 
+        .font-script {
+            display: inline-block;
+            padding-right: 0.5em;
+            padding-left: 0.1em;
+            overflow: visible;
+            line-height: 1.2;
+        }
+
         .gold-gradient-text {
             background: linear-gradient(135deg, #F3E8D0 0%, #C5A059 50%, #8C7051 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: inline-block;
+            padding-right: 0.6em;
+            margin-right: -0.3em;
+            padding-left: 0.1em;
+            overflow: visible;
         }
 
         .gold-border-glow {
@@ -119,7 +132,7 @@
 
     <!-- COVER MODAL (OPENING OVERLAY FOR MOBILE & DESKTOP) -->
     <div id="cover-modal" class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-brand-dark text-center">
-        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('assets/images/couple-hero.jpeg'); filter: blur(3px);"></div>
+        <div class="absolute inset-0 opacity-30 bg-cover" style="background-image: url('assets/images/couple-hero.jpeg'); background-position: center 38%; filter: blur(3px);"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-brand-dark"></div>
 
         <div class="relative z-10 max-w-md lg:max-w-xl w-full glass-card p-8 sm:p-10 rounded-3xl gold-border-glow shadow-2xl flex flex-col items-center">
@@ -130,7 +143,7 @@
             </div>
 
             <p class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-2 font-medium">The Wedding of</p>
-            <h1 class="font-script text-5xl sm:text-6xl text-brand-gold-light mb-4 gold-gradient-text">Riska & Aldi</h1>
+            <h1 class="font-script text-5xl sm:text-6xl text-brand-gold-light mb-4 gold-gradient-text">Riska&nbsp;&amp;&nbsp;&nbsp;Aldi&nbsp;</h1>
 
             <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-brand-gold to-transparent mb-6"></div>
 
@@ -153,12 +166,12 @@
     <div class="w-full min-h-screen flex flex-col lg:flex-row bg-brand-dark">
 
         <!-- LEFT COLUMN (DESKTOP STICKY BANNER) -->
-        <aside class="hidden lg:flex lg:w-5/12 xl:w-1/2 h-screen sticky top-0 bg-cover bg-center flex-col justify-between p-12 text-center text-white relative overflow-hidden" style="background-image: url('assets/images/couple-hero.jpeg');">
+        <aside class="hidden lg:flex lg:w-5/12 xl:w-1/2 h-screen sticky top-0 bg-cover flex-col justify-between p-12 text-center text-white relative overflow-hidden" style="background-image: url('assets/images/couple-hero.jpeg'); background-position: center 38%;">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-black/60 to-black/70"></div>
 
             <div class="relative z-10" data-aos="fade-down">
                 <span class="text-xs uppercase tracking-[0.4em] text-brand-gold block mb-2 font-medium">Walimatul 'Ursy</span>
-                <h2 class="font-script text-6xl text-brand-gold-light gold-gradient-text">Riska & Aldi</h2>
+                <h2 class="font-script text-6xl text-brand-gold-light gold-gradient-text">Riska&nbsp;&amp;&nbsp;&nbsp;Aldi&nbsp;</h2>
             </div>
 
             <div class="relative z-10 my-auto" data-aos="zoom-in">
@@ -184,12 +197,12 @@
         <main id="main-content" class="w-full lg:w-7/12 xl:w-1/2 min-h-screen bg-brand-dark border-l border-stone-800 shadow-2xl pb-24 overflow-x-hidden">
 
             <!-- MOBILE HERO SECTION (ONLY SHOWN ON MOBILE SCREENS) -->
-            <section id="home" class="lg:hidden relative min-h-[90vh] flex flex-col items-center justify-between text-center p-6 bg-cover bg-center" style="background-image: url('assets/images/couple-hero.jpeg');">
+            <section id="home" class="lg:hidden relative min-h-[90vh] flex flex-col items-center justify-between text-center p-6 bg-cover" style="background-image: url('assets/images/couple-hero.jpeg'); background-position: center 38%;">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-brand-dark"></div>
 
                 <div class="relative z-10 pt-8" data-aos="fade-down">
                     <span class="text-xs tracking-[0.4em] uppercase text-brand-gold block mb-2">Walimatul 'Ursy</span>
-                    <h2 class="font-script text-6xl sm:text-7xl text-brand-gold-light gold-gradient-text">Riska & Aldi</h2>
+                    <h2 class="font-script text-6xl sm:text-7xl text-brand-gold-light gold-gradient-text">Riska&nbsp;&amp;&nbsp;&nbsp;Aldi&nbsp;</h2>
                 </div>
 
                 <div class="relative z-10 my-auto py-8" data-aos="zoom-in">
@@ -347,7 +360,7 @@
                                 <p><i class="fa-solid fa-location-dot text-brand-gold w-5"></i> Jl. Lintas Timur Jambi - Riau, Ukui Satu, Kec. Ukui, Kab. Pelalawan, Riau 28382</p>
                             </div>
                         </div>
-                        <a href="https://maps.google.com/?q=V5G3%2B77G,+Jl.+Lintas+Timur+Jambi+-+Riau,+Ukui+Satu,+Kec.+Ukui,+Kabupaten+Pelalawan,+Riau+28382" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 w-full py-2.5 rounded-xl bg-brand-gold text-stone-900 hover:brightness-110 text-xs font-bold justify-center transition-all">
+                        <a href="https://maps.app.goo.gl/QQYNYxH8XcervTcW9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 w-full py-2.5 rounded-xl bg-brand-gold text-stone-900 hover:brightness-110 text-xs font-bold justify-center transition-all">
                             <i class="fa-solid fa-map-location-dot"></i>
                             <span>Google Maps</span>
                         </a>
@@ -355,9 +368,14 @@
                 </div>
 
                 <!-- Embedded Google Map -->
-                <div class="rounded-3xl overflow-hidden border border-brand-gold/30 shadow-xl" data-aos="fade-up">
-                    <iframe title="Lokasi Pernikahan" src="https://maps.google.com/maps?q=V5G3%2B77G,+Jl.+Lintas+Timur+Jambi+-+Riau,+Ukui+Satu,+Kec.+Ukui,+Kabupaten+Pelalawan,+Riau+28382&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-56 border-0" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+                <a href="https://maps.app.goo.gl/QQYNYxH8XcervTcW9" target="_blank" rel="noopener noreferrer" class="block relative rounded-3xl overflow-hidden border border-brand-gold/30 shadow-xl group" data-aos="fade-up">
+                    <iframe title="Lokasi Pernikahan" src="https://maps.google.com/maps?q=V5G3%2B77G+CNI+UKUI+PELALAWAN+RIAU,+Jl.+Lintas+Timur+Jambi+-+Riau,+Ukui+Satu,+Kec.+Ukui,+Kabupaten+Pelalawan,+Riau+28382&t=&z=17&ie=UTF8&iwloc=&output=embed" class="w-full h-56 border-0 pointer-events-none" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors flex items-end justify-center pb-3">
+                        <span class="text-[11px] font-semibold bg-stone-900/80 text-brand-gold px-3 py-1 rounded-full backdrop-blur-sm border border-brand-gold/30">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Buka di Google Maps
+                        </span>
+                    </div>
+                </a>
             </section>
 
 
@@ -542,7 +560,7 @@
             <footer id="footer" class="py-12 px-6 sm:px-10 text-center space-y-6 bg-black/80">
                 <div class="space-y-3" data-aos="fade-up">
                     <p class="text-xs text-stone-400 italic">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
-                    <h3 class="font-script text-4xl text-brand-gold">Riska & Aldi</h3>
+                    <h3 class="font-script text-4xl text-brand-gold">Riska&nbsp;&amp;&nbsp;&nbsp;Aldi&nbsp;</h3>
                     
                     <div class="pt-4 border-t border-stone-800/80 max-w-xs mx-auto">
                         <p class="text-[11px] text-stone-400">Created with ❤️ by <span class="text-brand-gold font-semibold">Adhitya Rahman Arif</span></p>
